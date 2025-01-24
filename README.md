@@ -2,4 +2,4 @@ Picture this scenario: You and a friend both find yourselves in the classic dile
 
 This website is designed to solve this exact problem! Just input two movies of your choice, and it’ll recommend the top movies that are the best match for both of you!
 
-Live site can be viewed [here]([url](https://movie-mixer.vercel.app/)).
+Live site can be viewed [here](https://movie-mixer.vercel.app/).
