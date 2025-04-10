@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieMixer</title>
+    <link rel="icon" type="image/x-icon" href="img/strip.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- "This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB." -->
+    <p class="center">MovieMixer</p>
+    <div class="container">
+      <button id="strip1" onclick="popup('strip1')">
+        <img src="img/strip.png" />
+        <span class="center">Movie #1</span>
+        <span class="center">Choose First Movie</span>
+      </button>
+      <i class="fa-solid fa-arrows-rotate"></i>
+      <button id="strip2" onclick="popup('strip2')">
+        <img src="img/strip.png" />
+        <span class="center">Movie #2</span>
+        <span class="center">Choose Second Movie</span>
+      </button>
+    </div>
+    <div class="final">
+      <button id="strip3">
+        <img src="img/strip.png" id="image" />
+        <span class="center">text</span>
+      </button>
+    </div>
+    <div class="center" id="bg"></div>
+    <div class="center" id="popup">
+      <div class="popup-container">
+        <span>Search Your Movie...</span>
+        <i class="fa-solid fa-x fa-xl" onclick="closePopup()"></i>
+        <input type="text" id="search" />
+        <ul id="results"></ul>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/81c844565e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
