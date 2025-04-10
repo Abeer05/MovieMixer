@@ -3,15 +3,12 @@ const bg = document.getElementById("bg");
 const search = document.getElementById("search");
 const results = document.getElementById("results");
 
-require("dotenv").config();
-
-const API_KEY = process.env.TMDB_API_KEY;
-const AUTHORIZATION = process.env.TMDB_AUTHORIZATION;
-
 // TODO: MAKE CSS FOR LIST
 // FIXME: DISPLAYRESULTS IS SO UGLY BUT THATS A PROBLEM FOR LATER
 // FIXME: POSTERS NOT SHOWING UP? ALT ??
 // TODO: ADD FONT
+
+API_KEY = "970dced38f09a675c2ccc41b15fcdcb3";
 
 let strip;
 function popup(movie) {
@@ -30,7 +27,8 @@ const options = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization: AUTHORIZATION,
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5NzBkY2VkMzhmMDlhNjc1YzJjY2M0MWIxNWZjZGNiMyIsIm5iZiI6MTcyNTY3MDY0MC43MjQ1NzgsInN1YiI6IjY2ZGJhMTcwZWRmMTVmNzI1ZWVlMGQyYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RCuV2Afx8ZdosTh89Ibxjuyh8LP00QahLcWZDZf7tsY",
   },
 };
 
@@ -245,7 +243,7 @@ function sendData(database, movie1, movie2) {
     movies: [movie1, movie2],
   };
 
-  fetch("http://127.0.0.1:5000/recommend", {
+  fetch("https://moviemixer.onrender.com/recommend", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

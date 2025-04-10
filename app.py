@@ -3,7 +3,6 @@ from flask_cors import CORS
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
-import time
 from dotenv import load_dotenv
 import os
 
