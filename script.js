@@ -274,10 +274,19 @@ function displayFinalResult(results) {
     results[0].poster == null
       ? "img/strip.png"
       : `https://image.tmdb.org/t/p/w154${results[0].poster}`;
-  strip.children[1].textContent =
-    results[0].poster == null ? results[0].title : "";
+
+  if (results[0].poster == null) {
+    strip.children[1].textContent = results[0].title;
+    strip.children[2].textContent = "";
+  } else {
+    strip.children[1].textContent = "";
+    strip.children[2].textContent = results[0].title;
+  }
+
   console.log(results[0].poster);
   console.log(results[0].title);
 
   document.querySelector(".fa-arrows-rotate").classList.remove("fa-spin");
+  document.getElementById("subtitle").textContent =
+    "Love it? Or want to explore more? Swap one or both!";
 }

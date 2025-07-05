@@ -110,6 +110,12 @@ p {
   font-family: "sinetharregular";
 }
 
+#subtitle {
+  margin-top: -29vh;
+  font-size: 1vw;
+  font-family: "Playwrite HR", cursive;
+}
+
 #popup {
   width: 600px;
   height: 550px;
@@ -196,11 +202,13 @@ ul::-webkit-scrollbar-thumb:hover {
 
 #strip3 {
   opacity: 0;
-  transition: opacity 1s ease;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 2s ease;
   visibility: hidden;
 }
 
 #strip3.show {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
